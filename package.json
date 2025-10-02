@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "pm2": "pm2 start index.js --name bot-wa",
+    "pm2:dev": "pm2 start index.js --name bot-wa --watch",
+    "pm2:stop": "pm2 stop bot-wa",
+    "pm2:restart": "pm2 restart bot-wa",
+    "pm2:logs": "pm2 logs bot-wa"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.1",
